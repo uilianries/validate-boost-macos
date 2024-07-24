@@ -12,7 +12,7 @@ jobs:
     name: ci-macos-14-macos-latest-large
     strategy:
       matrix:
-        boost-version: [1.75.0, 1.82.0, 1.84.0, 1.85.0]
+        boost-version: [1.82.0, 1.84.0, 1.85.0]
 
     steps:
       - name: Checkout
