@@ -8,8 +8,8 @@ on:
 
 jobs:
   build:
-    runs-on: macos-14-latest-large
-    name: ci-macos-14-macos-latest-large
+    runs-on: macos-latest
+    name: ci-macos
     strategy:
       matrix:
         boost-version: [1.82.0, 1.84.0, 1.85.0]
