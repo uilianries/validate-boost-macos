@@ -51,11 +51,7 @@ jobs:
 
       - name: Install Conan dependencies
         run: |
-          conan install --requires=${{ matrix.boost-version }} \
-            -r conancenter \
-            -pr:b default \
-            -pr:h default \
-            -s build_type=Release \
+          conan install --requires=boost/${{ matrix.boost-version }} \
             -c:b tools.build:compiler_executables="{'c': '/usr/bin/clang', 'cpp': '/usr/bin/clang++'}" \
             -c:h tools.build:compiler_executables="{'c': '/usr/bin/clang', 'cpp': '/usr/bin/clang++'}" \
-            --build=${{ matrix.boost-version }} --build=missing
+            --build=boost/${{ matrix.boost-version }} --build=missing
