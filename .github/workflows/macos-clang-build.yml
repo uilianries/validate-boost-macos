@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-14
+    runs-on: macos-14-latest-large
     name: ci-macos-14-macos-latest-large
     strategy:
       matrix:
@@ -55,4 +55,4 @@ jobs:
             -c:b tools.build:compiler_executables="{'c': '/usr/bin/clang', 'cpp': '/usr/bin/clang++'}" \
             -c:h tools.build:compiler_executables="{'c': '/usr/bin/clang', 'cpp': '/usr/bin/clang++'}" \
             --build=boost/${{ matrix.boost-version }} --build=missing \
-            -s arch=x86_64
+            -s arch=x86_64 -g CMakeDeps -g CMakeToolchain -of build
