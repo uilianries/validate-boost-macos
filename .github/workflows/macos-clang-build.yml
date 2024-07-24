@@ -54,5 +54,5 @@ jobs:
           conan install --requires=boost/${{ matrix.boost-version }} \
             -c:b tools.build:compiler_executables="{'c': '/usr/bin/clang', 'cpp': '/usr/bin/clang++'}" \
             -c:h tools.build:compiler_executables="{'c': '/usr/bin/clang', 'cpp': '/usr/bin/clang++'}" \
-            --build=boost/${{ matrix.boost-version }} --build=missing
+            --build=boost/${{ matrix.boost-version }} --build=missing \
             -s arch=x86_64
